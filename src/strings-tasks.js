@@ -184,7 +184,7 @@ function removeLastOccurrences(str, value) {
  */
 function sumOfCodes(str) {
   return str
-    ? str.split('').reduce(function (previousValue, currentValue) {
+    ? str.split('').reduce((previousValue, currentValue) => {
         return previousValue + currentValue.charCodeAt(0);
       }, 0)
     : 0;
@@ -300,7 +300,7 @@ function containsSubstring(str, substring) {
  */
 function countVowels(str) {
   const vowels = ['a', 'e', 'i', 'o', 'u', 'y'];
-  return str.split('').reduce(function (previousValue, currentValue) {
+  return str.split('').reduce((previousValue, currentValue) => {
     return vowels.includes(currentValue.toLowerCase())
       ? previousValue + 1
       : previousValue;
@@ -345,7 +345,7 @@ function isPalindrome(str) {
  *   findLongestWord('No words here') => 'words'
  */
 function findLongestWord(sentence) {
-  return sentence.split(' ').reduce(function (previousValue, currentValue) {
+  return sentence.split(' ').reduce((previousValue, currentValue) => {
     return currentValue.length > previousValue.length
       ? currentValue
       : previousValue;
